@@ -29,10 +29,11 @@ function App() {
         }
       }
     setListProducts(tmpList)
+    setListProductsInit(tmpList)
     }else{
       setListProducts(items["products"])
+      setListProductsInit(items["products"])
     }
-    setListProductsInit(tmpList)
   }
 
   const sortList = (orderBy) =>{
