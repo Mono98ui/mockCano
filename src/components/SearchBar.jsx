@@ -1,13 +1,18 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-const SearchBar = () => {
-    const [searchKeyword, setSearchKeyword] = useState("")
+const SearchBar = ({applySearch}) => {
+  const [searchKeyword, setSearchKeyword] = useState("")
+  const onChangeValue = (e)=>{
+    const searchWord = e.target.value
+    setSearchKeyword(e.target.value)
+    applySearch(searchWord)
+  }
   return (
     <>
-        <input type="text" placeholder="Search.." value={searchKeyword} onChange={(e)=>setSearchKeyword(e.target.value)}/>
+        <input type="text" placeholder="Search.." value={searchKeyword} onChange={(e)=>onChangeValue(e)}/>
     </> 
   )
 }
 
-export default SearchBar
+export {SearchBar as default}
