@@ -3,7 +3,7 @@ import React from 'react'
 const Item = ({name, impact_score}) => {
   return (
     <>
-        <li>{name +" "+impact_score}</li>
+        <li>{`Name: ${name} impact_score: ${impact_score}`}</li>
 
     </>
   )
