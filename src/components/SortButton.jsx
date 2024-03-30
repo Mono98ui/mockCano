@@ -1,9 +1,15 @@
 import React from 'react'
+import { useState} from 'react'
 
-const SortButton = () => {
+const SortButton = ({sortList}) => {
+  const [isAcending, setIsAscending] = useState(true)
+  const changeOrder = ()=>{
+    setIsAscending(!isAcending)
+    sortList(!isAcending)
+  }
   return (
     <>
-        <button>Sort</button>
+        <button onClick={changeOrder}>Sort</button>
     </>
   )
 }

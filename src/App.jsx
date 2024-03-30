@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import items from './data.json'
 import Item from './components/Item'
 import SearchBar from './components/SearchBar'
@@ -22,17 +22,35 @@ function App() {
     }
   }
 
+  const sortList = (isAcending) =>{
+    let sortArray = []
+    if(isAcending){
+      sortArray =listProducts.map((product)=>{
+        return product
+      }).sort(function (product1, product2) {
+        return product1.impact_score > product2.impact_score;
+      })
+    }else{
+      sortArray =listProducts.map((product)=>{
+        return product
+      }).sort(function (product1, product2) {
+        return product1.impact_score < product2.impact_score;
+      })
+    }
+    setListProducts(sortArray)
+  }
+
 
 
   return (
     <>
       <h1>List of product</h1>
       <SearchBar applySearch={applySearch}/>
-      <SortButton/>
+      <SortButton sortList={sortList}/>
       <ul>
         {listProducts.map((product, index)=>{
-        return <Item key={index} name={product.name} score={product.impact_score}/>
-    })}
+        return <Item key={index} name={product.name} impact_score={product.impact_score}/>
+      })}
       </ul>
        
     </>

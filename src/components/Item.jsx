@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Item = ({name, score}) => {
+const Item = ({name, impact_score}) => {
   return (
     <>
-        <li>{name +" "+score}</li>
+        <li>{name +" "+impact_score}</li>
 
     </>
   )

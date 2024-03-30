@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const SearchBar = ({applySearch}) => {
   const [searchKeyword, setSearchKeyword] = useState("")
