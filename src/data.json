@@ -1,0 +1,52 @@
+{
+    "products": [
+      {
+        "name": "Reusable Bamboo Toothbrush",
+        "impact_score": 2
+      },
+      {
+        "name": "Organic Cotton Tote Bag",
+        "impact_score": 3
+      },
+      {
+        "name": "LED Light Bulbs",
+        "impact_score": 1
+      },
+      {
+        "name": "Electric Vehicle",
+        "impact_score": 5
+      },
+      {
+        "name": "Recycled Paper Notebook",
+        "impact_score": 4
+      },
+      {
+        "name": "Solar-Powered Phone Charger",
+        "impact_score": 3
+      },
+      {
+        "name": "Plant-Based Biodegradable Cutlery",
+        "impact_score": 2
+      },
+      {
+        "name": "Energy-Efficient Washing Machine",
+        "impact_score": 4
+      },
+      {
+        "name": "Upcycled Glass Bottle Drinking Glasses",
+        "impact_score": 3
+      },
+      {
+        "name": "Organic Fruit and Vegetable Basket",
+        "impact_score": 2
+      },
+      {
+        "name": "Biodegradable Bamboo Plates",
+        "impact_score": 3
+      },
+      {
+        "name": "Fair Trade Organic Coffee Beans",
+        "impact_score": 2
+      }
+    ]
+  }  
