@@ -10,10 +10,10 @@ function App() {
   const [listProductsInit, setListProductsInit] = useState(items["products"])
   const [orderBy, setOrderBy] = useState(0)
 
-  const changeOrder = ()=>{
+  const changeOrder = () => {
 
-    let nbr = orderBy+1
-    if(nbr > 2){
+    let nbr = orderBy + 1
+    if (nbr > 2) {
       nbr = 0
     }
     setOrderBy(nbr)
@@ -21,21 +21,21 @@ function App() {
 
   }
 
-  const applySearch = (searchWord) =>{
+  const applySearch = (searchWord) => {
     let tmpList = []
 
     //Search product containing the specify word
-    if(searchWord.length!==0){
-      for(let i =0; i < items["products"].length; i++){
-        if(items["products"][i].name.includes(searchWord)){
+    if (searchWord.length !== 0) {
+      for (let i = 0; i < items["products"].length; i++) {
+        if (items["products"][i].name.includes(searchWord)) {
           tmpList.push(items["products"][i])
         }
       }
 
-    setListProducts(tmpList)
-    setListProductsInit(tmpList)
+      setListProducts(tmpList)
+      setListProductsInit(tmpList)
 
-    }else{
+    } else {
 
       setListProducts(items["products"])
       setListProductsInit(items["products"])
@@ -43,28 +43,28 @@ function App() {
     }
   }
 
-  const sortList = (orderBy) =>{
+  const sortList = (orderBy) => {
     let sortArray = []
 
     //Ascending
-    if(orderBy === 1){
+    if (orderBy === 1) {
 
-      sortArray =listProducts.map((product)=>{
+      sortArray = listProducts.map((product) => {
         return product
       }).sort(function (product1, product2) {
         return product1.impact_score > product2.impact_score;
       })
 
-    //Descending
-    }else if( orderBy === 2){
+      //Descending
+    } else if (orderBy === 2) {
 
-      sortArray =listProducts.map((product)=>{
+      sortArray = listProducts.map((product) => {
         return product
       }).sort(function (product1, product2) {
         return product1.impact_score < product2.impact_score;
       })
 
-    }else{
+    } else {
 
       sortArray = listProductsInit
     }
@@ -77,9 +77,9 @@ function App() {
   return (
     <>
       <h1>List of products</h1>
-      <SearchBar applySearch={applySearch}/>
-      <SortButton changeOrder={changeOrder}/>
-      <Items listProducts={listProducts}/>
+      <SearchBar applySearch={applySearch} />
+      <SortButton changeOrder={changeOrder} />
+      <Items listProducts={listProducts} />
     </>
   )
 }

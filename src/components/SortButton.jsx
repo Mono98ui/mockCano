@@ -1,11 +1,10 @@
 import React from 'react'
-import { useState} from 'react'
 
-const SortButton = ({changeOrder}) => {
+const SortButton = ({ changeOrder }) => {
 
   return (
     <>
-        <button onClick={changeOrder}>Sort</button>
+      <button onClick={changeOrder}>Sort</button>
     </>
   )
 }
