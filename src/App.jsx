@@ -23,7 +23,9 @@ function App() {
       setListProducts(tmpList)
       setListProductsInit(tmpList)
 
-    } else {
+    }
+    //Reinitialize the product listing 
+    else {
 
       setListProducts(items["products"])
       setListProductsInit(items["products"])
