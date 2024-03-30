@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react'
 const SearchBar = ({applySearch}) => {
   const [searchKeyword, setSearchKeyword] = useState("")
   const onChangeValue = (e)=>{
-    const searchWord = e.target.value
     setSearchKeyword(e.target.value)
-    applySearch(searchWord)
+    applySearch(e.target.value)
   }
   return (
     <>
