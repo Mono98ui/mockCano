@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import items from './data.json'
-import Item from './components/Item'
 import SearchBar from './components/SearchBar'
 import SortButton from './components/SortButton'
+import Items from './components/Items'
 
 function App() {
   const [listProducts, setListProducts] = useState(items["products"])
   const [listProductsInit, setListProductsInit] = useState(items["products"])
-
-
   const [orderBy, setOrderBy] = useState(0)
 
   const changeOrder = ()=>{
@@ -63,12 +61,7 @@ function App() {
       <h1>List of product</h1>
       <SearchBar applySearch={applySearch}/>
       <SortButton changeOrder={changeOrder}/>
-      <ul>
-        {listProducts.map((product, index)=>{
-        return <Item key={index} name={product.name} impact_score={product.impact_score}/>
-      })}
-      </ul>
-       
+      <Items listProducts={listProducts}/>
     </>
   )
 }
