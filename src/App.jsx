@@ -36,7 +36,7 @@ function App() {
   const sortList = (orderBy) => {
     let sortArray = []
 
-    //Ascending
+    //Ascending list
     if (orderBy === 1) {
 
       sortArray = listProducts.map((product) => {
@@ -45,8 +45,9 @@ function App() {
         return product1.impact_score > product2.impact_score;
       })
 
-      //Descending
-    } else if (orderBy === 2) {
+    } 
+    //Descending list
+    else if (orderBy === 2) {
 
       sortArray = listProducts.map((product) => {
         return product
@@ -54,7 +55,9 @@ function App() {
         return product1.impact_score < product2.impact_score;
       })
 
-    } else {
+    }
+    //Initial list 
+    else {
 
       sortArray = listProductsInit
     }
