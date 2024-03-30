@@ -8,18 +8,6 @@ function App() {
 
   const [listProducts, setListProducts] = useState(items["products"])
   const [listProductsInit, setListProductsInit] = useState(items["products"])
-  const [orderBy, setOrderBy] = useState(0)
-
-  const changeOrder = () => {
-
-    let nbr = orderBy + 1
-    if (nbr > 2) {
-      nbr = 0
-    }
-    setOrderBy(nbr)
-    sortList(nbr)
-
-  }
 
   const applySearch = (searchWord) => {
     let tmpList = []
@@ -78,7 +66,7 @@ function App() {
     <>
       <h1>List of products</h1>
       <SearchBar applySearch={applySearch} />
-      <SortButton changeOrder={changeOrder} />
+      <SortButton sortList={sortList} />
       <Items listProducts={listProducts} />
     </>
   )
