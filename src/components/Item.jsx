@@ -3,8 +3,10 @@ import React from 'react'
 const Item = ({ name, impact_score }) => {
   return (
     <>
-      <li>{`Name: ${name} || impact_score: ${impact_score}`}</li>
-
+      <div className="card">
+        <h2>{name}</h2>
+        <p className="impact">Environmental Impact: {impact_score}</p>
+      </div>
     </>
   )
 }

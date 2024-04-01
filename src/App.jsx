@@ -68,10 +68,13 @@ function App() {
 
 
   return (
-    <>
-      <h1>List of products</h1>
-      <SearchBar applySearch={applySearch} />
-      <SortButton sortList={sortList} />
+    <>  
+      <div className="container-header">
+        <h1>List of products</h1>
+        <SearchBar applySearch={applySearch} />
+        <br/>
+        <SortButton sortList={sortList} />
+      </div>
       <Items listProducts={listProducts} />
     </>
   )
