@@ -15,7 +15,7 @@ function App() {
     //Search product containing the specify word
     if (searchWord.length !== 0) {
       for (let i = 0; i < items["products"].length; i++) {
-        if (items["products"][i].name.includes(searchWord)) {
+        if (items["products"][i].name.toLowerCase().includes(searchWord.toLowerCase())) {
           tmpList.push(items["products"][i])
         }
       }
